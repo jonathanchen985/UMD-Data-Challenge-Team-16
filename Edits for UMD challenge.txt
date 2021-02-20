@@ -1,0 +1,264 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "brand_owner",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Ahold Usa, Inc.",
+          "Ahold USA, Inc.",
+          "Ahold USA, Inc. "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ahold Usa, Inc."
+      },
+      {
+        "from": [
+          "The Kellogg Company",
+          "The Kellogg Company "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "The Kellogg Company"
+      },
+      {
+        "from": [
+          "Bush Brothers & Company",
+          "Bush Brothers & Company "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bush Brothers & Company"
+      },
+      {
+        "from": [
+          "PANOS Brands LLC",
+          "PANOS Brands LLC "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PANOS Brands LLC"
+      },
+      {
+        "from": [
+          "Wegmans Food Markets, Inc.",
+          "Wegmans Food Markets, Inc. "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wegmans Food Markets, Inc."
+      },
+      {
+        "from": [
+          "Hormel Foods Corporation",
+          "Hormel Foods Corporation "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Hormel Foods Corporation"
+      },
+      {
+        "from": [
+          "K CAFE",
+          "K CAFE'"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "K CAFE"
+      },
+      {
+        "from": [
+          "Conagra Brands",
+          "CONAGRA BRANDS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Conagra Brands"
+      },
+      {
+        "from": [
+          "Pinnacle Foods Group LLC",
+          "PINNACLE FOODS GROUP, LLC"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Pinnacle Foods Group LLC"
+      },
+      {
+        "from": [
+          "Riviana Foods Inc.",
+          "RIVIANA FOODS INC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Riviana Foods Inc."
+      },
+      {
+        "from": [
+          "Tyson Foods, Inc.",
+          "TYSON FOODS, INC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tyson Foods, Inc."
+      },
+      {
+        "from": [
+          "Colavita USA, LLC",
+          "Colavita USA, LLC "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Colavita USA, LLC"
+      },
+      {
+        "from": [
+          "T.G.I. FRIDAY'S",
+          "TGI FRIDAYS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "T.G.I. FRIDAY'S"
+      },
+      {
+        "from": [
+          "Del Real LLC",
+          "Del Real LLC."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Del Real LLC"
+      },
+      {
+        "from": [
+          "Whitsons CUlinary Group",
+          "Whitsons CUlinary Group "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Whitsons CUlinary Group"
+      },
+      {
+        "from": [
+          "CAMPBELL SOUP COMPANY",
+          "Campbell Soup Company"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CAMPBELL SOUP COMPANY"
+      }
+    ],
+    "description": "Mass edit cells in column brand_owner"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ingredients",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ingredients using expression value.toLowercase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ingredients",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "chicken patty sandwich: chicken patty [chicken breast with rib meat, water, breader (wheat flour, salt, dextrose, soybean oil, extractives of paprika),  soy protein isolate, contains 2% or less of: wheat flour, rice flour, modified food starch, salt, spices, flavoring, black pepper ,dextrose, spice extractives. fried in vegetable oil with bht].  bun whole wheat flour, whey, high fructose corn syrup, vegetable oil (soybean and/or cottonseed oils), water, enriched bleached flour (wheat flour, malted barley flour, niacin, iron, thiamine mononitrate (vitamin b1), riboflavin (vitamin b2), folic acid), yeast, wheat gluten.  contains 2% or less of the following:  distilled vinegar, dough conditioners (may contain one or more of the following: mono-and diglycerides, sodium stearoyl lactylates, calcium peroxide, ascorbic acid), salt, cellulose gum, yeast nutrients (monocalcium phosphate, calcium sulfate, ammonium sulfate), corn starch, soy lecithin, soy flour. vegetable blend [corn, carrots, peas, water, sugar]. tater puffsã‚â® [potatoes, vegetable oil (contains one or more of the following: canola, corn, cottonseed, palm, soybean, and/or sunflower), dehydrated potato, salt, disodium dihydrogen pyrophosphate (preserve color), dextrose]. strawberry flavored popping crispies [sugar, crackling candy (sugar, lactose, glucose, carbon dioxide), rice flour, palm kernel oil, whole milk powder, rolled oats, unenriched wheat flour, reduced mineral whey powder, soybean oil, brown sugar,  natural flavors, salt, soy lecithin, calcium carbonate, natural color (glycerin, beet juice powder), rosemary extract].contains: wheat, soy, milk."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "chicken patty sandwich: chicken patty [chicken breast with rib meat, water, breader (wheat flour, salt, dextrose, soybean oil, extractives of paprika),  soy protein isolate, contains 2% or less of: wheat flour, rice flour, modified food starch, salt, spices, flavoring, black pepper ,dextrose, spice extractives. fried in vegetable oil with bht].  bun whole wheat flour, whey, high fructose corn syrup, vegetable oil (soybean and/or cottonseed oils), water, enriched bleached flour (wheat flour, malted barley flour, niacin, iron, thiamine mononitrate (vitamin b1), riboflavin (vitamin b2), folic acid), yeast, wheat gluten.  contains 2% or less of the following:  distilled vinegar, dough conditioners (may contain one or more of the following: mono-and diglycerides, sodium stearoyl lactylates, calcium peroxide, ascorbic acid), salt, cellulose gum, yeast nutrients (monocalcium phosphate, calcium sulfate, ammonium sulfate), corn starch, soy lecithin, soy flour. vegetable blend [corn, carrots, peas, water, sugar]. tater puffs [potatoes, vegetable oil (contains one or more of the following: canola, corn, cottonseed, palm, soybean, and/or sunflower), dehydrated potato, salt, disodium dihydrogen pyrophosphate (preserve color), dextrose]. strawberry flavored popping crispies [sugar, crackling candy (sugar, lactose, glucose, carbon dioxide), rice flour, palm kernel oil, whole milk powder, rolled oats, unenriched wheat flour, reduced mineral whey powder, soybean oil, brown sugar,  natural flavors, salt, soy lecithin, calcium carbonate, natural color (glycerin, beet juice powder), rosemary extract].contains: wheat, soy, milk."
+      }
+    ],
+    "description": "Mass edit cells in column ingredients"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ingredients",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "pancakes (water, flour blend [whole wheat flour {ultragrainãƒâ€šã‚â®},enriched wheat flour {wheat flour, niacin, reduced iron, thiamin mononitrate, riboflavin , folic acid}], sugar, soybean oil, dextrose, contains 2% or less of: eggs, leavening [sodium bicarbonate, sodium aluminum phosphate, monocalcium phosphate], salt, buttermilk, modified food starch, soy lecithin [an emulsifier], cinnamon, natural maple flavor, xanthan gum), blueberry and cherry sauce (water, blueberries, cherries, brown sugar, cherry juice concentrate, modified corn starch, almond oil [natural almond oil other natural ingredients, water, alcohol], malic acid), tater puffãƒâ€šã‚â® (potatoes, vegetable oil [contains one or more of the following: canola, corn, cottonseed, palm, soybean, sunflower], dehydrated potato, salt, disodium dihydrogen pyrophosphate [to promote color retention], dextrose), turkey sausage link (turkey, mechanically separated turkey, salt, natural flavorings, citric acid), water, seasoning blend (dextrose, corn syrup solids, spices, sugar, bha, bht, citric acid), soy protein concentrate. contains: wheat, soy, egg, milk"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "pancakes (water, flour blend [whole wheat flour {ultragrain},enriched wheat flour {wheat flour, niacin, reduced iron, thiamin mononitrate, riboflavin , folic acid}], sugar, soybean oil, dextrose, contains 2% or less of: eggs, leavening [sodium bicarbonate, sodium aluminum phosphate, monocalcium phosphate], salt, buttermilk, modified food starch, soy lecithin [an emulsifier], cinnamon, natural maple flavor, xanthan gum), blueberry and cherry sauce (water, blueberries, cherries, brown sugar, cherry juice concentrate, modified corn starch, almond oil [natural almond oil other natural ingredients, water, alcohol], malic acid), tater puffãƒâ€šã‚â® (potatoes, vegetable oil [contains one or more of the following: canola, corn, cottonseed, palm, soybean, sunflower], dehydrated potato, salt, disodium dihydrogen pyrophosphate [to promote color retention], dextrose), turkey sausage link (turkey, mechanically separated turkey, salt, natural flavorings, citric acid), water, seasoning blend (dextrose, corn syrup solids, spices, sugar, bha, bht, citric acid), soy protein concentrate. contains: wheat, soy, egg, milk"
+      }
+    ],
+    "description": "Mass edit cells in column ingredients"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ingredients",
+    "expression": "value.replace(\"ultragrainã‚â®\",\"ultragrain\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ingredients using expression value.replace(\"ultragrainã‚â®\",\"ultragrain\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ingredients",
+    "expression": "value.replace(\"puffãƒâ€šã‚â®\",\"puffs\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ingredients using expression value.replace(\"puffãƒâ€šã‚â®\",\"puffs\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "ingredients",
+    "expression": "value.replace(\"sautãƒâ©ed\",\"sautee\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column ingredients using expression value.replace(\"sautãƒâ©ed\",\"sautee\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "household_serving_fulltext",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column household_serving_fulltext using expression value.toLowercase()"
+  }
+]
