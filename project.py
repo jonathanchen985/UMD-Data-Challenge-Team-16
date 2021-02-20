@@ -1,9 +1,16 @@
 
 import pandas as pd 
-import numpy as np
 
-#import data
-df = pd.read_csv("Data_Lv2_USDA_PackagedMeals.csv") 
+df = pd.read_csv ("Data_Lv2_USDA_PackagedMeals.csv")
+
+ingredients=df["ingredients"]
+print(ingredients)
+
+for item in df["ingredients"]:
+    item= str(item)
+    item=item.split(",")
+    print(item)
+   
 
 
 
