@@ -30,9 +30,9 @@ def a(test_str):
             ret += i
     return ret
 
-x = "[to promote color retention], (dextrose), turkey sausage link (turkey, mechanically separated turkey, salt, natural flavorings, citric acid), water, seasoning blend (dextrose, corn syrup solids, spices, sugar, bha, bht, citric acid), soy protein concentrate. contains: wheat, soy, egg, milk"
 x = a(myListStr)
-print (x)
+print(x.replace("*",""))
+
 
    
 
