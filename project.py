@@ -1,18 +1,20 @@
-
+#Import Packages
 import pandas as pd 
 import re
-
+# Read in cleaned dataset
 df = pd.read_csv ("Data_Lv2_USDA_PackagedMeals.csv")
 
+#Create Ingredients variable from dataset
 ingredients=df["ingredients"]
-print(ingredients)
 
+#Append list with each item in ingredients
 myList=[]
-for item in df["ingredients"]:
+for item in ingredients:
     item= str(item)
     myList.append(item)
 myListStr=str(myList)    
 
+#Function: Remove items within parentheses, brackects and curly brackets
 def a(test_str):
     ret = ''
     skip1c = 0
@@ -30,6 +32,7 @@ def a(test_str):
             ret += i
     return ret
 
+#Remove '*' in myList 
 x = a(myListStr)
 print(x.replace("*",""))
 
