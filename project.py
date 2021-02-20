@@ -15,7 +15,7 @@ for item in ingredients:
 myListStr=str(myList)    
 
 #Function: Remove items within parentheses, brackects and curly brackets
-def a(test_str):
+def remove_char(test_str):
     ret = ''
     skip1c = 0
     skip2c = 0
@@ -33,8 +33,8 @@ def a(test_str):
     return ret
 
 #Remove '*' in myList 
-x = a(myListStr)
-print(x.replace("*",""))
+ingredient_list = remove_char(myListStr)
+print(ingredient_list.replace("*",""))
 
 
    
