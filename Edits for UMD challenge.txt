@@ -260,5 +260,44 @@
     "repeat": false,
     "repeatCount": 10,
     "description": "Text transform on cells in column household_serving_fulltext using expression value.toLowercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "household_serving_fulltext",
+    "expression": "value.replace(\"1 entrã©e\",\"1 entree\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column household_serving_fulltext using expression value.replace(\"1 entrã©e\",\"1 entree\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "household_serving_fulltext",
+    "expression": "value.replace(\"1 entrãƒâ©e\",\"1 entree\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column household_serving_fulltext using expression value.replace(\"1 entrãƒâ©e\",\"1 entree\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "household_serving_fulltext",
+    "expression": "value.replace(\"1 pattie\",\"1 patty\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column household_serving_fulltext using expression value.replace(\"1 pattie\",\"1 patty\")"
   }
 ]
