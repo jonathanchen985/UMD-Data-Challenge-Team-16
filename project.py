@@ -40,12 +40,14 @@ ingredient_listStr = remove_char(myListStr)
 ingredient_listStr_final=ingredient_listStr.replace("*","")
 
 # split() returns list of all the words in the string
-split_it = ingredient_listStr_final.split(",")
+split_it = ingredient_listStr_final.split()
 # Pass the split_it list to instance of Counter class.
 Counter = Counter(split_it)
 # input values and their respective counts.
 most_occur = Counter.most_common(5)
 print(f"Most common ingredients and how many times occur: {most_occur}")
+
+
 
 
 
