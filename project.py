@@ -41,11 +41,14 @@ ingredient_listStr_final=ingredient_listStr.replace("*","")
 
 # split() returns list of all the words in the string
 split_it = ingredient_listStr_final.split(",")
-print(split_it)
-words_to_count = (word for word in split_it)
-c = Counter(words_to_count)
-print (f"Most common ingredients and how many times occur: {c.most_common(10)}")
+#print(split_it)
+#words_to_count = (word for word in split_it)
+#c = Counter(words_to_count)
+#print (f"Most common ingredients and how many times occur: {c.most_common(10)}")
 
+ingredient_count = pd.Series(split_it).value_counts()
+# Most common ingredients
+print(ingredient_count[:10])
 
 
 
