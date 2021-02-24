@@ -10,5 +10,4 @@ Questions
 
 
 
-  Helpful resources:
-  https://stackoverflow.com/questions/14596884/remove-text-between-and
+
