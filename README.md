@@ -12,3 +12,14 @@ Questions
 
   Helpful resources:
   https://stackoverflow.com/questions/14596884/remove-text-between-and
+
+
+def select_data_category(data, category):
+    cat = data[category].unique()
+    print('Select from the following categories')
+    for idx,value in enumerate(cat):
+        print(f'Enter {idx} to select {value}')
+    selection = int(input('Selection: '))
+    return data[data[category]==cat[selection]]
+
+meals = select_data_category(df,'branded_food_category')
