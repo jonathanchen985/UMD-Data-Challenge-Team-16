@@ -46,14 +46,3 @@ print(f"OVERALL TOP INGREDIENTS \n{count[:10]}")
 count[:10].plot(kind='bar')
 plt.show()
 
-#select category for analyzation
-def select_data_category(data, category):
-    cat = data[category].unique()
-    print('Select from the following categories')
-    for idx,value in enumerate(cat):
-        print(f'Enter {idx} to select {value}')
-    selection = int(input('Selection: '))
-    return data[data[category]==cat[selection]]
-
-#run line to analyze a single food category
-#---->df = select_data_category(df,'branded_food_category')
