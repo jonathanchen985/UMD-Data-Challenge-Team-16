@@ -1,23 +1,11 @@
-#Import Packages
-import pandas as pd 
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 import re
-from collections import Counter 
-# Read in cleaned dataset
-df = pd.read_csv ("Data_Lv2_USDA_PackagedMeals.csv")
 
-#Create Ingredients variable from dataset
-ingredients=df["ingredients"]
-
-#Append list with each item in ingredients
-myList=[]
-for item in ingredients:
-    item= str(item)
-    myList.append(item)
-#cast to str so can use in function
-myListStr=str(myList)    
-
-#Function: Remove items within parentheses, brackects and curly brackets
+#remove () and [] from string
 def remove_char(test_str):
+    test_str = str(test_str)
     ret = ''
     skip1c = 0
     skip2c = 0
@@ -34,25 +22,38 @@ def remove_char(test_str):
             ret += i
     return ret
 
-#Remove () and []
-ingredient_listStr = remove_char(myListStr)
-#Remove *
-ingredient_listStr_final=ingredient_listStr.replace("*","")
+#read in csv
+df = pd.read_csv ("Data_Lv2_USDA_PackagedMeals.csv")
+#apply remove_char function
+df['ingredients'] = df['ingredients'].apply(remove_char)
 
-# split() returns list of all the words in the string
-split_it = ingredient_listStr_final.split(",")
-#print(split_it)
-#words_to_count = (word for word in split_it)
-#c = Counter(words_to_count)
-#print (f"Most common ingredients and how many times occur: {c.most_common(10)}")
+#create list for all ingredients
+all_ingredients = [] 
+for row in df['ingredients']:
+    #split each ingredient at comma
+    temp = row.split(',')
+    #remove leading and trailing whitespace
+    temp = list(map(str.strip,temp))
+    #remove * and .
+    all_ingredients += list(map(lambda _: _.strip('*.'),temp))
+#make series    
+all_ingredients = pd.Series(map(str.strip,all_ingredients))
+#get series of ingredients and their counts
+count = all_ingredients.value_counts()
+#print top ingredients and their counts
+print(f"OVERALL TOP INGREDIENTS \n{count[:10]}")
+#plot top ingredients (MAKE SURE TO DOWNLOAD PYTHON EXTENSION PACK IF IN VSC)
+count[:10].plot(kind='bar')
+plt.show()
 
-ingredient_count = pd.Series(split_it).value_counts()
-# Most common ingredients
-print(ingredient_count[:10])
+#select category for analyzation
+def select_data_category(data, category):
+    cat = data[category].unique()
+    print('Select from the following categories')
+    for idx,value in enumerate(cat):
+        print(f'Enter {idx} to select {value}')
+    selection = int(input('Selection: '))
+    return data[data[category]==cat[selection]]
 
-
-
-   
-
-
-
+#run line to analyze a single food category
+#---->df = select_data_category(df,'branded_food_category')
