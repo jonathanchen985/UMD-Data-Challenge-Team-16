@@ -52,7 +52,7 @@ def collect_pairs(lines, token_count):
     return pair_counter
 
 #Get the combinations of ingredients     
-pairs1 = collect_pairs(lst2, 3)
+pairs1 = collect_pairs(lst2, 2)
 print(pairs1.most_common(10))
 
 #print(f"TOP COMBINATIONS \n{combination_counts.value_counts()[:3]}")
